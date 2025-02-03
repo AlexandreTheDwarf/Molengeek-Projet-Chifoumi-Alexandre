@@ -1,0 +1,13 @@
+.MyModal{
+    width: 100%;
+    height: 100%;
+
+    position: relative;
+
+    .CloseModal{
+        position: absolute;
+        top: 5px;
+        right:5px;
+        color:whitesmoke;
+    }
+}
