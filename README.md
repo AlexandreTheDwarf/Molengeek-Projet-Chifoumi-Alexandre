@@ -1,4 +1,4 @@
-# 🏹 Infanterie / Archer / Cavalerie - Jeu React  
+# 🏹 Piquier / Archer / Cavalerie - Jeu React  
 
 Ce projet est une implémentation du célèbre jeu **Pierre / Papier / Ciseaux**, mais avec une touche stratégique : les unités militaires !  
 
@@ -6,12 +6,11 @@ Ce projet est une implémentation du célèbre jeu **Pierre / Papier / Ciseaux**
 Affrontez l'ordinateur en choisissant parmi **Piquier**, **Archer** ou **Cavalerie**, et tentez d'accumuler des points en appliquant les règles du triangle de combat.  
 
 ## 🎮 Règles du jeu  
-- **Infanterie** bat **Cavalerie** (la cavalerie s'écrasent sur les piquiers).  
-- **Archers** battent **Infanterie** (les flèches touchent les piquiers avant qu'ils n'atteignent leur cible).  
+- **Piquier** bat **Cavalerie** (la cavalerie s'écrasent sur les piquiers).  
+- **Archers** battent **Piquier** (les flèches touchent les piquiers avant qu'ils n'atteignent leur cible).  
 - **Cavalerie** bat **Archer** (les chevaux chargent les archers sans défense).  
 - Une victoire **ajoute un point**.  
-- Une défaite **retire un point**.  
-- Possibilité de **sauvegarder le score après un refresh** _(optionnel)_.  
+- Une défaite **retire un point**.   
 
 ## 🛠️ Technologies utilisées  
 - **React** ⚛️  
