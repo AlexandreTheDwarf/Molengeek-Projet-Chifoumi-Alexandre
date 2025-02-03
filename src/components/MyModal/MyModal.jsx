@@ -7,8 +7,8 @@ import "./MyModal.scss"
 function Modal({setModalStatut}) {
   return (
     <div className='MyModal'>
-        <span className='CloseModal'onClick={() => setModalStatut("close")}>X</span>
         <div className='ModalContainer'>
+        <span className='CloseModal'onClick={() => setModalStatut("close")}>X</span>
           <div className='ModalContainerTop'>
                 <ChoiceButton 
                       image={<GiCavalry />} 

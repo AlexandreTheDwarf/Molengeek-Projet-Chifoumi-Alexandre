@@ -1,8 +1,36 @@
-# React + Vite
+# 🏹 Infanterie / Archer / Cavalerie - Jeu React  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ce projet est une implémentation du célèbre jeu **Pierre / Papier / Ciseaux**, mais avec une touche stratégique : les unités militaires !  
 
-Currently, two official plugins are available:
+## 🚀 Objectif  
+Affrontez l'ordinateur en choisissant parmi **Piquier**, **Archer** ou **Cavalerie**, et tentez d'accumuler des points en appliquant les règles du triangle de combat.  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🎮 Règles du jeu  
+- **Infanterie** bat **Cavalerie** (la cavalerie s'écrasent sur les piquiers).  
+- **Archers** battent **Infanterie** (les flèches touchent les piquiers avant qu'ils n'atteignent leur cible).  
+- **Cavalerie** bat **Archer** (les chevaux chargent les archers sans défense).  
+- Une victoire **ajoute un point**.  
+- Une défaite **retire un point**.  
+- Possibilité de **sauvegarder le score après un refresh** _(optionnel)_.  
+
+## 🛠️ Technologies utilisées  
+- **React** ⚛️  
+- **useState** pour gérer l'état du jeu  
+
+## 📌 Installation  
+1. Clonez le repo :  
+   ```bash
+   git clone https://github.com/ton-projet.git
+   cd ton-projet
+   ```
+2. Installez les dépendances :  
+   ```bash
+   npm install
+   ```
+3. Lancez l'application :  
+   ```bash
+   npm run dev
+   ```
+
+## ✨ Amusez-vous bien ! 🎯  
+
