@@ -1,17 +1,34 @@
 import React from 'react'
 import ChoiceButton from '../ChoiceButton/ChoiceButton'
 import { GiBowman, GiPikeman, GiCavalry } from "react-icons/gi";
-import './MyModal.scss'
+import { FaArrowRight } from "react-icons/fa";
+import "./MyModal.scss"
 
-function Modal(setModalStatut) {
+function Modal({setModalStatut}) {
   return (
-    <div className='Modal'>
+    <div className='MyModal'>
         <span className='CloseModal'onClick={() => setModalStatut("close")}>X</span>
         <div className='ModalContainer'>
           <div className='ModalContainerTop'>
+                <ChoiceButton 
+                      image={<GiCavalry />} 
+                      backgroundColor="green" 
+                  />
+                  <FaArrowRight className='Arrow'/>
                   <ChoiceButton 
                       image={<GiBowman />} 
                       backgroundColor="red" 
+                  />
+              </div>
+              <div className='ModalContainerBody'>
+                  <ChoiceButton 
+                      image={<GiBowman />} 
+                      backgroundColor="red" 
+                  />
+                  <FaArrowRight className='Arrow'/>
+                  <ChoiceButton 
+                      image={<GiPikeman />} 
+                      backgroundColor="blue" 
                   />
               </div>
               <div className='ModalContainerBot'>
@@ -19,6 +36,7 @@ function Modal(setModalStatut) {
                       image={<GiPikeman />} 
                       backgroundColor="blue" 
                   />
+                  <FaArrowRight className='Arrow'/>
                   <ChoiceButton 
                       image={<GiCavalry />} 
                       backgroundColor="green" 

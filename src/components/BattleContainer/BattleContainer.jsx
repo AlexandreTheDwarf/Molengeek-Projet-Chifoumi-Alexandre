@@ -18,7 +18,7 @@ function BattleContainer({ choice, botChoice, result, setResult, setChoice, setB
   }
 
       // Fonction pour voir qui a gagner ou draw
-      function winlose(choice, botChoice) {
+    function winlose(choice, botChoice) {
         console.log('Player choice:', choice);
         console.log('Bot choice:', botChoice);
     
@@ -29,7 +29,6 @@ function BattleContainer({ choice, botChoice, result, setResult, setChoice, setB
             (choice === "Pikeman" && botChoice === "Cavalry") ||
             (choice === "Cavalry" && botChoice === "Archer")
         ) {
-          // setCount(count+1)
            return "win"
         } else {
            return "lose"
@@ -90,16 +89,9 @@ function BattleContainer({ choice, botChoice, result, setResult, setChoice, setB
       </div>
     {/* Affichage du choix du resultat */}
     <div className="winOrlose">
-        {/* {result === "win" && <span>Vous avez gagné !</span>}
-        {result === "lose" && <span>Vous avez perdu !</span>}
-        {result === "draw" && <span>Égalité !</span>} */}
-        {r}
-        {
-          choice
-        }
-        {
-          botChoice
-        }
+        {r === "win" && <span>Vous avez gagné !</span>}
+        {r === "lose" && <span>Vous avez perdu !</span>}
+        {r === "draw" && <span>Égalité !</span>}
         <button onClick={restart}><VscDebugRestart /></button>
       </div>
       {/* Affichage du choix du bot */}

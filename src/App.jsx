@@ -4,6 +4,7 @@ import ScoreBoard from './components/ScoreBoard/ScoreBoard';
 import ChoiceContainer from './components/ChoiceContainer/ChoiceContainer';
 import BattleContainer from './components/BattleContainer/BattleContainer';
 import MyModal from './components/MyModal/MyModal';
+import { FaBook } from "react-icons/fa6";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -38,7 +39,7 @@ function App() {
           count = {count}
         />
       )}
-      <button onClick={() => setModalStatut("open")}>Rules</button>
+      <button onClick={() => setModalStatut("open")} className='rules'><FaBook /></button>
       {
         modalStatut === "open" ? (
           <MyModal setModalStatut={setModalStatut}/>

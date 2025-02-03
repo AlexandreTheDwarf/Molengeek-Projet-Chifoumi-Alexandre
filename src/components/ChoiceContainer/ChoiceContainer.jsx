@@ -4,26 +4,58 @@ import ChoiceButton from '../ChoiceButton/ChoiceButton'
 import { GiBowman, GiPikeman, GiCavalry } from "react-icons/gi";
 
 function ChoiceContainer({ setChoice, choice, botChoice, setBotChoice, count, setCount, setResult }) {
-
-    // Fonction qui gère le choix du joueur et celui du bot
-    function handlePlayerChoice(choice) {
-        console.log('Player choice before update:', choice);
-        BotChoice()
-        setChoice(choice);
-        console.log('Player choice after update:', choice); // Cela devrait refléter la mise à jour
-        // Le bot fait son choix après que le joueur ait fait le sien
-    }
+    
     
     // Fonction qui génère un choix aléatoire pour le bot
-    function BotChoice() {
+    function ChooseBotChoice() {
         const unites = ["Archer", "Pikeman", "Cavalry"];
         const botPick = unites[Math.floor(Math.random() * unites.length)];
-        setBotChoice(botPick);
-        // winlose(choice, botPick);
+        return botPick
+
     }
+
+      // Fonction pour voir qui a gagner ou draw
+      function winlose(c , b) {
+    
+        if (c === b) {
+           return "draw"
+        } else if (
+            (c === "Archer" && b === "Pikeman") ||
+            (c === "Pikeman" && b === "Cavalry") ||
+            (c === "Cavalry" && b === "Archer")
+        ) {
+           return "win"
+        } else {
+           return "lose"
+        }
+    }
+
+
+    // Fonction qui gère le choix du joueur et celui du bot
+    function handlePlayerChoice(c) {
+        let b = ChooseBotChoice()
+        
+        console.log("test");
+        console.log(c, "VS" , b);
+        
+
+        if (winlose(c, b) == "win") { 
+                setCount(count+1)
+        }else if (winlose(c, b) == "lose"){
+            setCount(count-1)
+        }else{
+            count
+        }
+        setBotChoice(b)
+        setChoice(c)
+    }
+
+    
 
     return (
         <div className='ChoiceContainer'>
+            {choice}
+            {botChoice}
             <div className='ChoiceContainerTop'>
                 <ChoiceButton 
                     image={<GiBowman />} 
